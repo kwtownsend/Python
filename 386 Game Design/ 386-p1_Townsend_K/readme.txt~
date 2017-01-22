@@ -1,0 +1,16 @@
+# author: Kendall Townsend
+# email: kendallcar@csu.fullerton.edu
+# description: Uses the MyPRNG class this is the executable file and tells you whether you are warmer/colder
+
+This program mostly works with the parameters that were given for the assignment. I'm not familiar with getopts, or very familiar with python
+so I figured that accepting inputs into variables was the way that you referred to as doing it by hand. Another thing I wasn't able to figure
+out was how to make the __init__ take zero arguments as a constructor. It also throws up problems if you don't do anything in the constructor
+I'm unsure if it's just because of my lack of familiarity with python. I used the default values from the article where a = 16807, and 
+m = 2147483647. To make sure it was in the range I checked the random number to see if it was less then the minimum and if it was I added the 
+minimum to the total number, and if it was over the maximum I took the (random number) % maximum. I put in as many fail-safes for bad user input
+as I could think of. Other then that it's a pretty straightforward program you execute it by going to the folder and just typing ./guess.py then
+the command prompt will ask you 'Enter seed for rng:(blank uses current second of time) ' if its left blank it is self explanatory it uses the
+current seconds of the whatever time it is. Then it will prompt you 'Enter Minimum range number:(blank will use 1) ' where again left blank will
+use the given default value. Then last it will prompt you for 'Enter Maximum range number:(blank will use 1000) ' where if you just hit enter
+it will set it to 1000. Then the program will calculate random numbers and the 101st one it will set to the random number you have to guess.
+Then using your best guess it will tell you whether you are colder or warmer and if you are warmer will set your new closest guess.
